@@ -1,0 +1,42 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "name": "vscode-jest-tests.v2-1692701898690",
+      "request": "launch",
+      "args": [
+        "test",
+        "--runInBand",
+        "--watchAll=false",
+        "--testNamePattern",
+        "${jest.testNamePattern}",
+        "--runTestsByPath",
+        "${jest.testFile}"
+      ],
+      "cwd": "/Users/sunbeyond/Documents/Git/stone-core",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "runtimeExecutable": "yarn"
+    },
+    {
+      "type": "node",
+      "name": "vscode-jest-tests.v2",
+      "request": "launch",
+      "args": [
+        "test",
+        "--runInBand",
+        "--watchAll=false",
+        "--testNamePattern",
+        "${jest.testNamePattern}",
+        "--runTestsByPath",
+        "${jest.testFile}"
+      ],
+      "cwd": "/Users/sunbeyond/Documents/Git/stone-core",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "runtimeExecutable": "yarn"
+    }
+  ]
+}
