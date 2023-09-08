@@ -1,8 +1,8 @@
 /**
- * 是否为数字类型
- * - true  数字、16进制、科学计数、小数点、负数、Infinity、NaN
- * - 这里不能把 NaN 判定为 false
- * - 按照 `ToNumber` 官方设定，undefined 会转为 NaN
- * - 而如果这里把 NaN 判定不为数值，则不符合转换
+ * Whether it is a numeric type
+ * - true for numbers, hexadecimal values, scientific notation, decimal points, negative numbers, Infinity, NaN
+ * -  NaN should not be considered false here
+ * - According to the official specification of ToNumber, undefined is converted to NaN
+ * - If NaN is not considered a numeric value here, it would not comply with the conversion rules
  */
 export const isNumber = (val: any): boolean => typeof val === 'number'

@@ -8,7 +8,6 @@ import { isNumber } from './is-number'
  * - false: NaN、正负无穷大
  * - 如果用原生的 isFinite，则[]、“”、null、布尔值会是 true；而原生 Number.isFinite 则是一样
  * @see http://www.ecma-international.org/ecma-262/6.0/#sec-number.isfinite
- * @alias isFinite
  */
 export const isFinite = (val: any): boolean => isNumber(val) && nativeIsFinite(val)
 

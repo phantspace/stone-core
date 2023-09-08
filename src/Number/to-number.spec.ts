@@ -79,5 +79,17 @@ describe('toNumber', () => {
     // Test case 16: Check undefined value
     const result16 = toNumber(undefined)
     expect(result16).toBeNaN()
+
+    // Test case 17: Check Binary value
+    const result17 = toNumber(0b10)
+    expect(result17).toEqual(2)
+
+    // Test case 18: Check Octal value
+    const result18 = toNumber(0o70)
+    expect(result18).toEqual(56)
+
+    // Test case 19: Check Hexadecimal value
+    const result19 = toNumber(0x36)
+    expect(result19).toEqual(54)
   })
 })

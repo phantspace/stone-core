@@ -2,15 +2,15 @@ import { isNumber } from './is-number'
 import { nativeIsNaN } from './_constant'
 
 /**
- * 是否为 NaN
- * - 这里的定义会出现混淆，优先按照标准
- * - true  NaN、Number.NaN、0 / 0
- * - false 空数组、空字符串、对象、null、布尔值、undefined、数字、16进制、科学计数、小数点、负数、Infinity、数字字符串
- * - isNaN与isNumeric的区别，在于[ 0 ]、Infinity、'2017/04/10'、'2017-04-10'会被 isNaN 认为是数字，而 isNumeric 认为不是
- * - 不能用 ==、=== 来判断是否为 NaN
- * - val !== val 为 true 的表达式，只有NaN
- * - Number.isNaN不会强制将参数转换成数字，只有在参数是真正的数字类型，且值为 NaN 的时候才会返回 true
- * - 对 Map、Set 等类型判定为 false
+ * Whether it is NaN
+ * - true: for NaN, Number.NaN, 0 / 0
+ * - false: for empty arrays, empty strings, objects, null, boolean values, undefined, numbers, hexadecimal values, scientific notation, decimal points, negative numbers, Infinity, numeric strings
+ * - There can be confusion with the definition here, so it is best to follow the standard
+ * - The difference between isNaN and isNumeric is that [ 0 ], Infinity, '2017/04/10', '2017-04-10' are considered numbers by isNaN, but not by isNumeri
+ * - NaN cannot be determined using == or ===
+ * - The expression val !== val evaluates to true only for NaN
+ * - Number.isNaN does not coerce the parameter into a number, it only returns true if the parameter is a true numeric type and has a value of NaN
+ * - Map, Set, and similar types are considered false.
  * @see <http://www.ecma-international.org/ecma-262/6.0/#sec-isnan-number|isNaN>
  */
 export const isNaN = (val: any): boolean => isNumber(val) && nativeIsNaN(val)
